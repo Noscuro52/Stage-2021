@@ -29,7 +29,7 @@ void loop() {
   Serial.println(sensorValue);
 
   if (sensorValue < 550) {
-      myServo.write(2500);
+      myServo.write(180);
       digitalWrite(onLight, HIGH);
       digitalWrite(offLight, LOW);
   }
