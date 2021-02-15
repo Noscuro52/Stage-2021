@@ -1,4 +1,4 @@
-const byte PIN_BUZZING_BUTTON = 2;
+const byte PIN_BUZZING_BUTTON = 8;
 
 /** Fonction setup() */
 void setup() {
@@ -9,7 +9,7 @@ void setup() {
 void beepMelody(unsigned int frequency, unsigned long duration, unsigned long delay_duration) {
   
   // Met le broche en entrée (sans pullup)
-  pinMode(PIN_BUZZING_BUTTON, INPUT);
+  pinMode(8, INPUT);
   
 }
 
