@@ -1,29 +1,66 @@
-import RPi.GPIO as GPIO
+import Jetson.GPIO as GPIO
 
-GPIO.setmode(GPIO.BOARD)
 GPIO.setup(13, GPIO.OUT) #pinLed
+
 GPIO.setup(9, GPIO.OUT) #Servo
+
 GPIO.setup(2, GPIO.OUT) #Perch
-GPIO.setup(4, GPIO.OUT) #buttonPhase
-GPIO.cleanup()
 
- phase = 0
+buttonPhasePin = 'DAP4_SCLK'
+ #buttonPhase
 
+phase = 0
 
-IsBirdOnPerch()  
+kit = Servokit(channel=16)
 
-GPIO.output(13, True)
+def main():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(buttonPhasePin, GPIO.IN)
 
-OpenServo()
-
-CloseServo()
-
-ChangePhase()
-
-Phase one() #Open servo and dont close it
+    GPIO.cleanup()
 
 
-Phase Two() #Open servo if bird is on perch and close when he leaves
+def IsBirdOnPerch():
+    if :
+        return True
+    else:
+        return False
 
-Phase Three() #Open servo if object = what we want, 30s then close Servo
+def OpenServo():
+    kit.servo[0].angle=360
+
+def CloseServo():
+    kit.servo[0].angle=315
+    kit.servo[0].angle=270
+    kit.servo[0].angle=225
+    kit.servo[0].angle=180
+    kit.servo[0].angle=135
+    kit.servo[0].angle=90
+    kit.servo[0].angle=45
+    kit.servo[0].angle=0
+
+def ChangePhase():
+    if phase == 3:
+        phase =0
+    else:
+        phase = phase + 1
+def reportCurrentPhase():
+    while x < phase:
+        print(x)
+        GPIO.output(13, True)
+
+def PhaseOne(): #Open servo and dont close it
+    OpenServo()
+
+def PhaseTwo(): #Open servo if bird is on perch and close when he leaves
+    if(IsBirdOnPerch):
+        OpenServo()
+    else:
+        CloseServo()
+
+def PhaseThree(): #Open servo if object = what we want, 30s then close Servo
+
+
+if __name__ == '__main__':
+    main()
 
