@@ -21,7 +21,7 @@ def main():
 
 
 def IsBirdOnPerch():
-    if :
+    if perch == True:
         return True
     else:
         return False
