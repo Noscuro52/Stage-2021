@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Header, Footer, Accueil} from './components'
-
+import { Header, Footer, Presentation, Projets, Competences, Activites, Resume} from './components'
 
 function App() {
   return (
@@ -9,7 +8,12 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" exact component={() => <Accueil />} />
+          <Route path="/" exact component={() => <Presentation />} />
+          <Route path="/presentation" exact component={() => <Presentation />} />
+          <Route path="/projets" exact component={() => <Projets />} />
+          <Route path="/competences" exact component={() => <Competences />} />
+          <Route path="/activites" exact component={() => <Activites />} />
+          <Route path="/resume" exact component={() => <Resume />} />
         </Switch>
         <Footer />
       </Router>

@@ -8,32 +8,31 @@ function Header(props) {
         <div className="container">
           <div className="navbar-collapse" id="navbarResponsive">
             <ul className="Menu_navigation">
-            <li id="Galerie">
-                <Link className="nav-link" to="/galerie">
-                  Galerie
+            <li id="Presentation">
+                <Link className="nav-link" to="/presentation">
+                  Présentation
                 </Link>
               </li>
-              <li id="Blog">
-                <Link className="nav-link" to="/blog">
-                  Blog
+              <li id="Projets">
+                <Link className="nav-link" to="/projets">
+                  Projets
                 </Link>
               </li>
-              <li id="Service">
-                <Link className="nav-link" to="/service">
-                  Services
+              <li id="Competences">
+                <Link className="nav-link" to="/competences">
+                  Compétences
                 </Link>
               </li>
-              <li id="About">
-                <Link className="nav-link" to="/about">
-                  About
+              <li id="Activites">
+                <Link className="nav-link" to="/activites">
+                  Activités
                 </Link>
               </li>
-              <li id="Contact">
-                <Link className="nav-link" to="/contact">
-                  Contact
+              <li id="Resume">
+                <Link className="nav-link" to="/resume">
+                  Résumé
                 </Link>
-              </li>
-        
+              </li>        
             </ul>
           </div>
         </div>
