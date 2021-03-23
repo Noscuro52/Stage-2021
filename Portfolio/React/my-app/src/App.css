@@ -72,3 +72,10 @@ color: white;
 h3 {
 font-family: bronova;
 }
+#logo {
+  width: 16%;
+  height: auto;
+  position:absolute;
+  top: -85px;
+  left: 30px;
+}

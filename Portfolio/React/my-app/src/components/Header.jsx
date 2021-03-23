@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import ephec from '../img/ephec.png'
 
 function Header(props) {
   return(
@@ -7,6 +8,7 @@ function Header(props) {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-collapse" id="navbarResponsive">
+            <img id="logo" src={ephec} alt="logo Ephec"/>
             <ul className="Menu_navigation">
             <li id="Presentation">
                 <Link className="nav-link" to="/presentation">
