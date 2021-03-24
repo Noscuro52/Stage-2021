@@ -2,13 +2,14 @@ from adafruit_servokit import ServoKit
 import time
 import RPi.GPIO as GPIO
 
-GPIO.setup(13, GPIO.OUT) #pinLed
+ledPin= 'GPIO_PZ0'
+GPIO.setup(ledPin, GPIO.OUT) #pinLed
 GPIO.setup(2, GPIO.OUT) #Perch
 
 buttonPhasePin = 'LCD_TE' #buttonPhase
 GPIO.setup(buttonPhasePin, GPIO.IN)
 
-phase = 0
+phase = 1
 
 kit = ServoKit(channels=16)
 
@@ -41,9 +42,13 @@ def ChangePhase():
     else:
         phase = phase + 1
 def reportCurrentPhase():
+    x=0
     while x < phase:
         print(x)
-        GPIO.output(13, True)
+        GPIO.output(ledPin, True)
+        tim(0.5)
+        GPIO.output(ledPin, False)
+        x = x + 1
 
 def PhaseOne(): #Open servo and dont close it
     OpenServo()

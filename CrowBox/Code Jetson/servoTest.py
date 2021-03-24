@@ -4,7 +4,11 @@ import RPi.GPIO as GPIO
 
 #GPIO.setmode(GPIO.BOARD)
 inPin = 'LCD_TE'
+ledPin= 'GPIO_PZ0'
+perchPin= 'GPIO_PE6'
 GPIO.setup(inPin, GPIO.IN)
+GPIO.setup(perchPin, GPIO.IN)
+GPIO.setup(ledPin, GPIO.OUT)
 kit= ServoKit(channels=16)
 
 def Open():
@@ -25,10 +29,13 @@ def Close():
 
 while True:
     x=GPIO.input(inPin)
-    print(x)
+    y=GPIO.input(perchPin)
+    print(y)
     if x == 0:
         Open()
+        GPIO.output(ledPin, True)
         time.sleep(3)
+        GPIO.output(ledPin, False)
         Close()  
     time.sleep(1)
 
