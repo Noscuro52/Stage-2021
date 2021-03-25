@@ -4,16 +4,18 @@ import RPi.GPIO as GPIO
 
 ledPin= 'GPIO_PZ0'
 GPIO.setup(ledPin, GPIO.OUT) #pinLed
-GPIO.setup(2, GPIO.OUT) #Perch
+
+perchPin= 'GPIO_PE6'
+GPIO.setup(perchPin, GPIO.IN) #Perch
 
 buttonPhasePin = 'LCD_TE' #buttonPhase
 GPIO.setup(buttonPhasePin, GPIO.IN)
 
-phase = 1
+phase = 2
 
 kit = ServoKit(channels=16)
 
-def IsBirdOnPerch():
+def IsBirdOnPerch(perch):
     if perch == True:
         return True
     else:
@@ -38,39 +40,47 @@ def CloseServo():
 
 def ChangePhase():
     if phase == 3:
-        phase =0
+        phase = 1
     else:
         phase = phase + 1
 def reportCurrentPhase():
-    x=0
-    while x < phase:
-        print(x)
+    numPhase=0
+    while numPhase < phase:
+        print(numPhase)
         GPIO.output(ledPin, True)
-        tim(0.5)
+        time(0.5)
         GPIO.output(ledPin, False)
-        x = x + 1
+        numPhase = numPhase + 1
 
 def PhaseOne(): #Open servo and dont close it
+    #reportCurrentPhase()
     OpenServo()
 
-def PhaseTwo(): #Open servo if bird is on perch and close when he leaves
-    if(IsBirdOnPerch()):
-        OpenServo()
-    else:
+def PhaseTwo(x): #Open servo if bird is on perch and close when he leaves
+    #reportCurrentPhase()
+    if(IsBirdOnPerch(x)):
         CloseServo()
+    else:
+        OpenServo()
 
 def PhaseThree(): #Open servo if object = what we want, 30s then close Servo
-
+    reportCurrentPhase()
+    OpenServo()
+    time(3)
+    CloseServo()
 def main():
     while True:
-    x=GPIO.input(inPin)
-    print(x)
-    if x == 0:
-        Open()
-        time.sleep(3)
-        Close()  
-    time.sleep(1)
-
+        x=GPIO.input(buttonPhasePin)
+        perch=GPIO.input(perchPin)
+        print(x)
+        if x == 0:
+            ChangePhase()
+        if phase == 1:
+            PhaseOne()
+        elif phase == 2:
+            PhaseTwo(perch)
+        elif phase == 3:
+            PhaseThree()
 
 if __name__ == '__main__':
     main()
