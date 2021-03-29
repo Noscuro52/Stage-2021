@@ -2,18 +2,23 @@ from adafruit_servokit import ServoKit
 import time
 import RPi.GPIO as GPIO
 
-ledPin= 'GPIO_PZ0'
-GPIO.setup(ledPin, GPIO.OUT) #pinLed
+ledPin= 'GPIO_PZ0' #31
+GPIO.setup(ledPin, GPIO.OUT) #Led
 
-perchPin= 'GPIO_PE6'
+perchPin= 'GPIO_PE6' #32
 GPIO.setup(perchPin, GPIO.IN) #Perch
 
-buttonPhasePin = 'LCD_TE' #buttonPhase
-GPIO.setup(buttonPhasePin, GPIO.IN)
+buttonPhasePin = 'LCD_TE' #15
+GPIO.setup(buttonPhasePin, GPIO.IN) #buttonPhase
 
-phase = 2
+kit = ServoKit(channels=16) #3 SDA, 5 SCL
 
-kit = ServoKit(channels=16)
+phase = 1
+
+INITIALSERVOPOSITION = 0
+FINALSERVOPOSITION = 90
+currentServoPosition = 0
+step = 15
 
 def IsBirdOnPerch(perch):
     if perch == True:
@@ -23,10 +28,19 @@ def IsBirdOnPerch(perch):
 
 def OpenServo():
     time.sleep(2)
-    kit.servo[0].angle = 0
+    kit.servo[0].angle = initialServoPosition
+    currentServoPosition = 0
 
 def CloseServo():
-    kit.servo[0].angle=15
+    i = 0
+    while(i <= finalServoPosition):
+        if currentServoPosition != finalServoPosition:
+            i = i + step
+            kit.servo[0].angle = i
+            currentServoPosition = i           
+            time.sleep(0.75)
+        
+"""     kit.servo[0].angle=15
     time.sleep(0.75)
     kit.servo[0].angle=30
     time.sleep(0.75)
@@ -36,14 +50,14 @@ def CloseServo():
     time.sleep(0.75)
     kit.servo[0].angle=75
     time.sleep(0.75)
-    kit.servo[0].angle=90
+    kit.servo[0].angle=90 """
 
-def ChangePhase():
+def ChangePhase(phase):
     if phase == 3:
         phase = 1
     else:
         phase = phase + 1
-def reportCurrentPhase():
+def reportCurrentPhase(phase):
     numPhase=0
     while numPhase < phase:
         print(numPhase)
@@ -53,7 +67,7 @@ def reportCurrentPhase():
         numPhase = numPhase + 1
 
 def PhaseOne(): #Open servo and dont close it
-    #reportCurrentPhase()
+    reportCurrentPhase(phase)
     OpenServo()
 
 def PhaseTwo(x): #Open servo if bird is on perch and close when he leaves
@@ -74,7 +88,7 @@ def main():
         perch=GPIO.input(perchPin)
         print(x)
         if x == 0:
-            ChangePhase()
+            ChangePhase(phase)
         if phase == 1:
             PhaseOne()
         elif phase == 2:
