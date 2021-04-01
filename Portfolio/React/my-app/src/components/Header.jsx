@@ -15,17 +15,17 @@ function Header(props) {
                   Présentation
                 </Link>
               </li>
-              <li id="Projets">
-                <Link className="nav-link" to="/projets">
-                  Projets
-                </Link>
-              </li>
               <li id="Competences">
                 <Link className="nav-link" to="/competences">
                   Compétences
                 </Link>
               </li>
-              <li id="Activites">
+              <li id="Projets">
+                <Link className="nav-link" to="/projets">
+                  Projets
+                </Link>
+              </li>
+               <li id="Activites">
                 <Link className="nav-link" to="/activites">
                   Activités
                 </Link>
