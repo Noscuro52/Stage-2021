@@ -27,51 +27,46 @@ def IsBirdOnPerch(perch):
         return False
 
 def OpenServo():
+    global currentServoPosition
     time.sleep(2)
-    kit.servo[0].angle = initialServoPosition
-    currentServoPosition = 0
+    kit.servo[0].angle = INITIALSERVOPOSITION
+    currentServoPosition = INITIALSERVOPOSITION
 
-def CloseServo():
+def CloseServo(): #close with small steps so that the bird has time to leave
+    global currentServoPosition
     i = 0
-    while(i <= finalServoPosition):
-        if currentServoPosition != finalServoPosition:
+    while(i <= FINALSERVOPOSITION):
+        if currentServoPosition != FINALSERVOPOSITION:
             i = i + step
             kit.servo[0].angle = i
             currentServoPosition = i           
             time.sleep(0.75)
-        
-"""     kit.servo[0].angle=15
-    time.sleep(0.75)
-    kit.servo[0].angle=30
-    time.sleep(0.75)
-    kit.servo[0].angle=45
-    time.sleep(0.75)
-    kit.servo[0].angle=60
-    time.sleep(0.75)
-    kit.servo[0].angle=75
-    time.sleep(0.75)
-    kit.servo[0].angle=90 """
+        else:
+            i = i + step
 
-def ChangePhase(phase):
-    if phase == 3:
+def ChangePhase(): #Press button to change phase
+    global phase
+    if phase == 3:       
         phase = 1
     else:
         phase = phase + 1
-def reportCurrentPhase(phase):
+        return phase
+def reportCurrentPhase():
     numPhase=0
-    while numPhase < phase:
-        print(numPhase)
+    print(phase)
+"""     while numPhase < phase:
+        
         GPIO.output(ledPin, True)
-        time(0.5)
+        time.sleep(0.5)
         GPIO.output(ledPin, False)
-        numPhase = numPhase + 1
+        numPhase = numPhase + 1 """
 
 def PhaseOne(): #Open servo and dont close it
-    reportCurrentPhase(phase)
+    reportCurrentPhase()
     OpenServo()
 
 def PhaseTwo(x): #Open servo if bird is on perch and close when he leaves
-    #reportCurrentPhase()
+    reportCurrentPhase()
     if(IsBirdOnPerch(x)):
         CloseServo()
     else:
@@ -80,15 +75,14 @@ def PhaseTwo(x): #Open servo if bird is on perch and close when he leaves
 def PhaseThree(): #Open servo if object = what we want, 30s then close Servo
     reportCurrentPhase()
     OpenServo()
-    time(3)
+    time.sleep(3)
     CloseServo()
 def main():
     while True:
         x=GPIO.input(buttonPhasePin)
         perch=GPIO.input(perchPin)
-        print(x)
         if x == 0:
-            ChangePhase(phase)
+            ChangePhase()
         if phase == 1:
             PhaseOne()
         elif phase == 2:
