@@ -43,7 +43,7 @@ function Activites() {
                     <img src={bmc} alt="BMC" />
                     <div class="mask">
                         <h2>Brussel Management Challenge</h2>
-                        <p>Le 19 et 20 mars, nous avons dans une équipe de 5, participé au BMC. 3 cases nous ont été soumises et nous avions 4h pour
+                        <p>Le 19 et 20 mars 2021, nous avons dans une équipe de 5, participé au BMC. 3 cases nous ont été soumises et nous avions 4h pour
                             trouver une solution à chacune d'elle. Cette expérience très différente de ce que nous faisons en informatique m'a appris
                             beaucoup de choses que je n'ai jamais eu l'occasion de rencontrer.
                         </p>

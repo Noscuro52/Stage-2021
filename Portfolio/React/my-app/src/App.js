@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Header, Footer, Presentation, Projets, Competences, Activites, Resume} from './components'
+import './resume.css'
+
+//https://rapidapi.com/blog/how-to-deploy-a-react-app/
 
 function App() {
   return (

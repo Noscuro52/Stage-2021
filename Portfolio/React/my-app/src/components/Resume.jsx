@@ -2,10 +2,10 @@ import React from "react";
 
 function Resume() {    
     return (
-        <div>
-            <h1>Resumé</h1>
-            <table>
-                <thead>
+        <div id="userContenu">
+            <h1 id="textAccueuil">Resumé</h1>
+            <table id ="tableUser">
+                <thead id="colonneUser">
                     <tr>
                         <th>Thème</th>
                         <th>Type d'activité</th>
@@ -16,15 +16,60 @@ function Resume() {
                         <th>lien vers la preuve de participation</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody id="colonneContenuUser">
+                    <tr id="champUser">
                         <td>Formation</td>
                         <td>Formation en React Native</td>
                         <td>"Open Classroom"</td>
-                        <td>Du 30 septembre au 15 novembre</td>
+                        <td>Du 30 septembre au 15 novembre 2020</td>
                         <td>10h</td>
                         <td>30h</td>
-                        <td>Lien dispo <a><i>ici</i></a></td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formation</td>
+                        <td>Formation en IA et en accesibilité</td>
+                        <td>"Open Classroom"</td>
+                        <td>Du 15 fevrier au 15 avril 2021</td>
+                        <td>10h</td>
+                        <td>12h</td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Challenge</td>
+                        <td>Cyber Security Challenge</td>
+                        <td>"CSC"</td>
+                        <td>Mars 2020 et mars 2021</td>
+                        <td>10h</td>
+                        <td>30h</td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Challenge</td>
+                        <td>Brussel Management Challenge</td>
+                        <td>"BMC"</td>
+                        <td>Du 19 au 20 mars 2021</td>
+                        <td>10h</td>
+                        <td>28h</td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Développement web</td>
+                        <td>Site internet Ralfagram</td>
+                        <td>"Visual Studio Code"</td>
+                        <td>Du 01 aout 2020 au 14 février 2021</td>
+                        <td>10h</td>
+                        <td>25h</td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Activité extrascolaire</td>
+                        <td>Animateur scout</td>
+                        <td>"22e BW MSG"</td>
+                        <td>Apd 01 septembre 2018</td>
+                        <td>10h</td>
+                        <td>+1000h</td>
+                        <td>Lien disponible <a><i>ici</i></a></td>
                     </tr>
                 </tbody>
             </table>
