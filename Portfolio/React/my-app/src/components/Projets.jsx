@@ -15,7 +15,7 @@ function Projet() {
                         <h2>Projet d'intégration</h2>
                         <p>Nous avons en 3ème année réalisé un projet d'intégration en groupe de 7. Notre projet appelé DoorZ, il consistait à
                             développer une application qui permettrait d'ouvrir une porte. Il avait pour but d'aider les personnes à mobilité réduite
-                            à accéder à des espaces plus efficacement.
+                            pour accéder à des espaces plus efficacement.
                         </p>
                     </div>
             </div>
@@ -34,7 +34,7 @@ function Projet() {
                     <div class="mask">         
                         <h2>Projet de traitement des signaux</h2>
                         <p>Nous avons en 3ème année par groupe de 5, réalisé un projet en python. Ce projet avait pour but grâce au traitement des signaux, de pouvoir
-                            compter un nombre de personnes qui passe une ligne. Ce projet a été une base pour mon apprentissage d'IA par la suite.
+                            compter un nombre de personne qui passe une ligne. Ce projet a été une base pour mon apprentissage d'IA par la suite.
                         </p>
                 </div>
                 </div>
@@ -43,12 +43,12 @@ function Projet() {
                     <div class="mask">
                         <h2>Projet d'administration des réseaux</h2>
                         <p>Nous avons en 2ème année par groupe de 3, réalisé une infrastructure réseau pour une entreprise virtuelle. Nous avons 
-                            implémenté un serveur web, mail, voip et toutes les sécurités liées à ces services
+                            implémenté un serveur web, mail, voip et toutes les sécurités liées à ces services.
                         </p>
                     </div>
                 </div>
                 <br></br>
-                  <h3 id="sous-lien">Tous ces projets et d'autres sont disponibles sur mon lien <a href="https://github.com/Noscuro52" target="_blank" rel="noreferrer"><i>Github</i></a></h3>                   
+                  <h3 id="sous-lien">Tous ces projets et d'autres sont disponible sur mon lien <a href="https://github.com/Noscuro52" target="_blank" rel="noreferrer"><i>Github</i></a></h3>                   
         </div>
     )
     

@@ -24,16 +24,16 @@ function Resume() {
                         <td>Du 30 septembre au 15 novembre 2020</td>
                         <td>10h</td>
                         <td>30h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='/rnproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
                         <td>Formation</td>
                         <td>Formation en IA et en accesibilité</td>
                         <td>"Open Classroom"</td>
-                        <td>Du 15 fevrier au 15 avril 2021</td>
+                        <td>Du 15 février au 15 avril 2021</td>
                         <td>10h</td>
                         <td>12h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='/iaproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
                         <td>Challenge</td>
@@ -42,7 +42,7 @@ function Resume() {
                         <td>Mars 2020 et mars 2021</td>
                         <td>10h</td>
                         <td>30h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='/cscproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
                         <td>Challenge</td>
@@ -51,25 +51,25 @@ function Resume() {
                         <td>Du 19 au 20 mars 2021</td>
                         <td>10h</td>
                         <td>28h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='/bmcproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
                         <td>Développement web</td>
                         <td>Site internet Ralfagram</td>
                         <td>"Visual Studio Code"</td>
-                        <td>Du 01 aout 2020 au 14 février 2021</td>
+                        <td>Du 01 août 2020 au 14 février 2021</td>
                         <td>10h</td>
                         <td>25h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='/ralfproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
                         <td>Activité extrascolaire</td>
                         <td>Animateur scout</td>
                         <td>"22e BW MSG"</td>
-                        <td>Apd 01 septembre 2018</td>
+                        <td>Depuis le 01 septembre 2018</td>
                         <td>10h</td>
                         <td>+1000h</td>
-                        <td>Lien disponible <a><i>ici</i></a></td>
+                        <td>Lien disponible <a href='scoutproof'><i>ici</i></a></td>
                     </tr>
                 </tbody>
             </table>
