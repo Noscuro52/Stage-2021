@@ -28,7 +28,7 @@ function Resume() {
                     </tr>
                     <tr>
                         <td>Formation</td>
-                        <td>Formation en IA et en accesibilité</td>
+                        <td>Formation en IA et en accessibilité</td>
                         <td>"Open Classroom"</td>
                         <td>Du 15 février au 15 avril 2021</td>
                         <td>10h</td>
@@ -56,14 +56,14 @@ function Resume() {
                     <tr>
                         <td>Développement web</td>
                         <td>Site internet Ralfagram</td>
-                        <td>"Visual Studio Code"</td>
+                        <td>Ralfagram</td>
                         <td>Du 01 août 2020 au 14 février 2021</td>
                         <td>10h</td>
                         <td>25h</td>
                         <td>Lien disponible <a href='/ralfproof'><i>ici</i></a></td>
                     </tr>
                     <tr>
-                        <td>Activité extrascolaire</td>
+                        <td>Mouvement de jeunesse</td>
                         <td>Animateur scout</td>
                         <td>"22e BW MSG"</td>
                         <td>Depuis le 01 septembre 2018</td>
@@ -73,6 +73,9 @@ function Resume() {
                     </tr>
                 </tbody>
             </table>
+            <div id='lienCV'>
+                <p>Télecharger mon CV : </p><button id='buttonDownload'><a href='https://we.tl/t-5xZC9kXi8G'>Télecharger</a></button>
+            </div>
         </div>
     )
     

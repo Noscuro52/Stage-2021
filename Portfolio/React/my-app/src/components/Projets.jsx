@@ -8,7 +8,7 @@ function Projet() {
     return (
         <div class="main">
             <h1>Projets</h1>
-            <p>Voici la liste des principaux projets que j'ai réalisé dans le cadre de mes études à l'EPHEC en Technologie de l'informatique</p>
+            <p>Voici la liste des principaux projets que j'ai réalisés dans le cadre de mes études à l'EPHEC en technologie de l'informatique.</p>
             <div class="view view-first">
                 <img src={app} alt="Projet d'intégration"/>
                     <div class="mask">
@@ -24,7 +24,7 @@ function Projet() {
                     <div class="mask">                  
                         <h2>Projet de développement Web</h2>
                         <p>Nous avons en 2ème année par groupe de 3, réalisé un site web pour un client. Le site web qu'on a développé s'appelle "Ralfagram",
-                            il nous a été demandé par un photographe qui voulait une meilleur visibilité de son travail. Je suis particulièrement fier de 
+                            il nous a été demandé par un photographe qui voulait une meilleure visibilité de son travail. Je suis particulièrement fier de 
                             ce projet que nous avons même continué en dehors du cadre des cours.
                         </p>
                     </div>
@@ -34,7 +34,7 @@ function Projet() {
                     <div class="mask">         
                         <h2>Projet de traitement des signaux</h2>
                         <p>Nous avons en 3ème année par groupe de 5, réalisé un projet en python. Ce projet avait pour but grâce au traitement des signaux, de pouvoir
-                            compter un nombre de personne qui passe une ligne. Ce projet a été une base pour mon apprentissage d'IA par la suite.
+                            compter un nombre de personnes qui passe une ligne. Ce projet a été une base pour mon apprentissage d'IA par la suite.
                         </p>
                 </div>
                 </div>
@@ -48,7 +48,7 @@ function Projet() {
                     </div>
                 </div>
                 <br></br>
-                  <h3 id="sous-lien">Tous ces projets et d'autres sont disponible sur mon lien <a href="https://github.com/Noscuro52" target="_blank" rel="noreferrer"><i>Github</i></a></h3>                   
+                  <h3 id="sous-lien">Tous ces projets et d'autres sont disponibles sur mon lien <a href="https://github.com/Noscuro52" target="_blank" rel="noreferrer"><i>Github</i></a></h3>                   
         </div>
     )
     

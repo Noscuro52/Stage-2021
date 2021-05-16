@@ -42,3 +42,16 @@ tbody tr td {
       color: black;
       text-decoration: underline;
   }
+  #lienCV {
+    position: relative;
+    left: 10%;
+  }
+  #buttonDownload a {
+    color: black;
+  }
+  #buttonDownload {
+    border : 1px solid white;
+    border-radius: 5%;
+    height: 30px;
+    width: 150px;
+  }

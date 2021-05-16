@@ -16,7 +16,7 @@ function Activites() {
                     <div class="mask">
                         <h2>Formation React Native</h2>
                         <p>J'ai réalisé une formation React Native sur le site Open Classroom. Cette formation m'a aidée à
-                            développer une application dans la cadre du cours d'intégration. La formation a durée une trentaines d'heures.
+                            développer une application dans le cadre du cours d'intégration. La formation a duré une trentaine d'heures.
                         </p>
                     </div>
             </div>
@@ -26,7 +26,7 @@ function Activites() {
                         <h2>Formation IA et accessibilité</h2>
                         <p>Au début de mon stage, j'ai pris l'initiative de suivre une formation d'introduction à l'IA qui est un domaine qui
                             m'était complètement flou. J'ai aussi suivi une formation sur l'accessibilité numérique suite à la séance d'information
-                            que nous avons reçu lors des cours à l'Ephec.
+                            que nous avons reçue lors des cours à l'Ephec.
                         </p>
                     </div>
             </div>
@@ -43,9 +43,9 @@ function Activites() {
                     <img src={bmc} alt="BMC" />
                     <div class="mask">
                         <h2>Brussel Management Challenge</h2>
-                        <p>Le 19 et 20 mars 2021, nous avons dans une équipe de 5, participé au BMC. 3 cases nous ont été soumises et nous avions 4h pour
-                            trouver une solution à chacune d'elle. Cette expérience très différente de ce que nous faisons en informatique m'a appris
-                            beaucoup de choses que je n'ai jamais eu l'occasion d'experimenter.
+                        <p>Les 19 et 20 mars 2021, nous avons dans une équipe de 5, participé au BMC. 3 cases nous ont été soumises et nous avions 4h pour
+                            trouver une solution à chacune d'elles. Cette expérience très différente de ce que nous faisons en informatique m'a appris
+                            beaucoup de choses que je n'ai jamais eu l'occasion d'expérimenter.
                         </p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ function Activites() {
                     <div class="mask">
                         <h2>Ralfagram</h2>
                         <p>Nous avons avec un autre étudiant d'IT à la suite du projet de développement web continué celui-ci. Le photographe Jerome Duikers a souhaité
-                            nous engager pour continuer son site en dehors du cadre du cours. Nous avons travaillé une soixantaine d'heure supplémentaire pour
+                            nous engager pour continuer son site en dehors du cadre du cours. Nous avons travaillé une soixantaine d'heures (25h pour moi) supplémentaires pour
                             rendre ce site totalement utilisable.
                         </p>
                     </div>

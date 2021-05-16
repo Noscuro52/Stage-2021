@@ -8,7 +8,7 @@ function Header(props) {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-collapse" id="navbarResponsive">
-            <img id="logo" src={ephec} alt="logo Ephec"/>
+            <a href='/'><img id="logo" src={ephec} alt="logo Ephec"/></a>
             <ul className="Menu_navigation">
             <li id="Presentation">
                 <Link className="nav-link" to="/presentation">

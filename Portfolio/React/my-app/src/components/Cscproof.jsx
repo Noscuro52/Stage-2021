@@ -7,7 +7,7 @@ import forma4 from '../img/CSC mail.PNG'
 function Cscproof() {    
     return (
         <div>
-            <h1>Preuves de la formation au Cyber Security Challenge</h1>
+            <h1>Preuves de la participation au Cyber Security Challenge</h1>
             <div id='divImgPreuve'>
             <img id ='imgPreuve' src={forma1} alt='preuve1'></img>
             </div>
